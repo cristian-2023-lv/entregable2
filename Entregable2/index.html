@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable 2 - Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora de Operaciones Básicas en JavaScript.</h1>
+    <script>
+        //Declaración de Variables
+        let num1=10;
+        let num2=5;
+       
+        console.log('CALCULADORA')
+        //Funsión para Operaciones Mátematicas
+ 
+        function realizarOperacion(num1,num2) {
+           
+         
+          while (true) {
+           
+            let operacion=parseFloat(prompt('que operacion Operación va Realizar: \n1 :Para SUMA  \n2 :Para RESTA  \n3 :Para MULTIPLICACIÓN \n4 :Para DIVISIÓN \n\ns :Para SALIR' ))
+           
+           
+            // entrada de  numero
+            operacion=parseInt(operacion);
+           
+            if (operacion===1 && operacion===2 && operacion===3 && operacion===4){
+               console.log('correcto') ;
+ 
+            }
+            if (operacion<=0 || operacion>4){
+                console.log('Error::: esta no es una opcion valida');
+               
+            }
+            if (operacion===1){
+                let suma=num1+num2;
+                console.log('La SUMA es: ' +suma);
+               
+               
+            }
+            if (operacion===2){
+                let resta=num1-num2;
+                console.log('La RESTA es: ' +resta);
+               
+            }
+            if (operacion===3){
+                let mult=num1*num2;
+                console.log('La MULTIPLICACIÓN es: '+mult);
+               
+ 
+            }
+ 
+            if (operacion===4){
+               
+                let div=num1/num2;
+                console.log('La DIVISIÓN es: ' +div);
+               
+ 
+            }
+            if (num2===0){
+                console.log('\n\nError::: No se puede dividir por "0"')
+ 
+            }
+           
+            if (operacion=isNaN(operacion)){
+               
+                console.log('\n\nGracias por Usar Nuestra Calculadora \n');
+                break;
+            }
+           
+        }
+       
+        }
+ 
+        realizarOperacion(num1,num2)
+    </script>
+</body>
+</html>
